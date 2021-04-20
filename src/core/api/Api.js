@@ -1,13 +1,17 @@
-// const API_KEY = FVi9KyJvFyTZCGHx7MPbQ3oXGI33
+import axios from 'axios'
 
-import React from 'react'
+export const getMatches = () => {
 
-function Api() {
-    return (
-        <div>
-             
-        </div>
+    // const url = 'https://cricapi.com/api/matches?apikey=${API_KEY}'
+
+    // const API_KEY = FVi9KyJvFyTZCGHx7MPbQ3oXGI33
+
+    axios.get('https://cricapi.com/api/matches?apikey=FVi9KyJvFyTZCGHx7MPbQ3oXGI33').then(
+        (res) => {
+            console.log(res.data);
+        }
     )
 }
 
-export default Api
+
+
