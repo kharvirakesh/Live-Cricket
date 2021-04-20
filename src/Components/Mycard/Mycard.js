@@ -12,7 +12,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import cricketlogo from '../assets/images/cricketlogo.jpg'
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +49,7 @@ export default function RecipeReviewCard() {
             RK
           </Avatar>
         }
-        title="Welcome to Live Cric Score App"
+        title="Welcome to Live Cricket Score App"
         subheader="Designed by Rakesh Kharvi">
         </CardHeader>
         <div>
@@ -60,7 +59,12 @@ export default function RecipeReviewCard() {
         </CardMedia>
         <div>
           <img src={cricketlogo} alt="logo"
-           style={{width:'300px',height:'300px', paddingLeft:'10px'}}
+           style={{
+             width:'300px',
+             height:'300px',
+             display: 'block',
+             marginLeft: 'auto',
+             marginRight: 'auto'}}
           /></div>
         </div>
       <CardContent>

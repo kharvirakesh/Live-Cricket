@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Components/Navbar/Navbar'
-import {getMatches} from '../src/core/api/Api.js'
+import {getMatches}  from './core/api/Api.js'
 import Mycard from './Components/Mycard/Mycard'
 
 function App() {
+
+ useEffect (()=> {
+  getMatches()
+ },[]
+ )
+
   return (
     <div>
       <Navbar></Navbar>
       <Mycard></Mycard>
+      {}
     </div>
   )
 }
