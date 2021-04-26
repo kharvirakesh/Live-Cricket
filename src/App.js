@@ -1,21 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar/Navbar'
-import {getMatches}  from './core/api/Api.js'
+import { getMatches } from './core/api/Api.js'
 import Mycard from './Components/Mycard/Mycard'
-import Card from './Components/Mycard/Card.js'
+
 
 function App() {
 
- useEffect (()=> {
-  getMatches()
- },[]
- )
+  const [matches, setmatches] = useState([])
+
+  useEffect(() => {
+    getMatches().then((data) => setmatches(data.matches))
+  }, [])
 
   return (
     <div>
       <Navbar></Navbar>
-      <Mycard></Mycard>
-      <Card></Card>
+    
+      {
+        matches.map((match) => (
+          <Mycard match={match} />
+        ))
+      }
     </div>
   )
 }

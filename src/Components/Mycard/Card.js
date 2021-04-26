@@ -1,11 +1,10 @@
 import { CardActions, CardContent, Typography,Grid } from '@material-ui/core'
-import React from 'react'
 import Button from '@material-ui/core/Button'
 
 function Card() {
 
-  const getMatch = () => {
     return (
+        <>
             <Card>
                 <CardContent>
                     <Grid container>
@@ -28,16 +27,9 @@ function Card() {
                     </Button>
                 </CardActions>
             </Card>
+        </>
     )
   }
 
-
-    return (
-        <div>
-            {getMatch()}
-            <h1>render</h1>
-        </div>
-    )
-}
 
 export default Card
